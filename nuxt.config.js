@@ -21,6 +21,12 @@ module.exports = {
     '@fortawesome/fontawesome-free-webfonts/css/fa-regular.css',
     '@fortawesome/fontawesome-free-webfonts/css/fa-solid.css',
   ],
+  modules: [
+    ['nuxt-sass-resources-loader', [
+      '~/assets/scss/_variables.scss',
+      '~/assets/scss/_mixins.scss'
+    ]]
+  ],
   build: {
     postcss: [
       require('autoprefixer')({

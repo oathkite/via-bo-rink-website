@@ -56,12 +56,21 @@ a {
 
 .site-header {
   margin-bottom: 24px;
+
+  @include media(sm, max) {
+    margin-bottom: 12px;
+  }
 }
 
 video {
   vertical-align: bottom;
   max-width: calc(100vw - 96px);
   max-height: calc(100vh - 168px);
+
+  @include media(sm, max) {
+    max-width: calc(100vw - 48px);
+    max-height: calc(100vh - 168px);
+  }
 }
 
 .site-info {
@@ -91,5 +100,15 @@ video {
   transform: translate(-50%, -50%);
   border: 1px solid #dbdbdb;
   padding: 24px;
+
+  @include media(sm, max) {
+    padding: 12px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    padding: 12px;
+    margin: 12px;
+  }
 }
 </style>
