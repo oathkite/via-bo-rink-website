@@ -1,0 +1,23 @@
+{
+  "name": "via-bo-rink",
+  "version": "1.0.0",
+  "description": "グラフィックデザイン及び空間デザイン、ビアボーリンク河合恭誌、ＪＡＧＤＡ会員、ビアボー、広告企画制作",
+  "author": "oathkite",
+  "private": true,
+  "scripts": {
+    "start": "HOST=0.0.0.0 PORT=3000 nuxt dev",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
+    "node-sass": "^4.9.4",
+    "nodemon": "^1.11.0",
+    "nuxt-sass-resources-loader": "^2.0.5",
+    "sass-loader": "^7.1.0",
+    "yarn": "^1.12.1"
+  }
+}
