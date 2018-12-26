@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <video src="~static/video/kv.mp4" muted autoplay loop></video>
+    <video src="~static/video/kv.mp4" playsinline muted autoplay loop></video>
   </section>
 </template>
 
