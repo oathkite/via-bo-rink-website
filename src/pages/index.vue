@@ -1,5 +1,6 @@
 <template>
   <section class="container">
+    <sound class="sound"/>
 
     <div class="site-header">
       <h1 class="site-title">
@@ -19,22 +20,36 @@
       </div>
     </div>
 
-    <video src="~static/video/kv.mp4" playsinline muted autoplay loop></video>
+    <video id="kv" src="~static/video/kv.mp4" playsinline muted autoplay loop></video>
   </section>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 import Logo from '~/components/Logo.vue'
 import Instagram from '~/components/Instagram.vue'
 import Phone from '~/components/Phone.vue'
 import Contact from '~/components/Contact.vue'
+import Sound from '~/components/Sound.vue'
 
 export default {
   components: {
     Logo,
     Phone,
     Contact,
-    Instagram
+    Instagram,
+    Sound
+  },
+  computed: {
+    ...mapGetters([
+      'isSoundOn'
+    ])
+  },
+  watch: {
+    isSoundOn() {
+      document.querySelector('#kv').muted = !this.isSoundOn
+    }
   }
 }
 </script>
@@ -46,8 +61,19 @@ a {
   }
 }
 
+.sound {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  @include media(sm, max) {
+    top: 12px;
+    right: 12px;
+  }
+}
+
 .site-title {
-  width: 180px;
+  width: 162px;
 
   svg {
     vertical-align: bottom;
@@ -66,16 +92,20 @@ video {
   vertical-align: bottom;
   max-width: calc(100vw - 96px);
   max-height: calc(100vh - 168px);
+  width: 840px;
 
   @include media(sm, max) {
-    max-width: calc(100vw - 48px);
-    max-height: calc(100vh - 168px);
+    max-width: calc(100vw - 24px);
+
+    position: absolute;
+    top: 50vh;
+    transform: translateY(-50%);
   }
 }
 
 .site-info {
   display: flex;
-  line-height: 9px;
+  line-height: 8px;
   margin-top: 6px;
 
   .contact {
@@ -89,7 +119,7 @@ video {
   }
 
   svg {
-    height: 9px;
+    height: 8px;
   }
 }
 
@@ -102,13 +132,13 @@ video {
   padding: 24px;
 
   @include media(sm, max) {
-    padding: 12px;
+    padding: 0;
     position: relative;
     top: auto;
     left: auto;
     transform: none;
     padding: 12px;
-    margin: 12px;
+    border: 0;
   }
 }
 </style>
