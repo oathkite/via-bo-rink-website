@@ -1,6 +1,6 @@
 <template>
   <div class="sound" v-on:click="toggle">
-    <sound-on v-if="!isSoundOn"/>
+    <sound-on v-if="isSoundOn"/>
     <sound-off v-else/>
   </div>
 </template>
