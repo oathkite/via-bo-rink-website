@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import {mapGetters} from 'vuex'
 
 import Logo from '~/components/Logo.vue'
 import Instagram from '~/components/Instagram.vue'
@@ -41,14 +41,9 @@ export default {
     Instagram,
     Sound
   },
-  computed: {
-    ...mapGetters([
-      'isSoundOn'
-    ])
-  },
   watch: {
     isSoundOn() {
-      document.querySelector('#kv').muted = !this.isSoundOn
+      this.toggleSound()
     }
   }
 }

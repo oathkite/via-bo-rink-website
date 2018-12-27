@@ -8,6 +8,6 @@ export const getters = {
 
 export const mutations = {
   toggleSound (state) {
-      state.isSoundOn = !state.isSoundOn
+      return state.isSoundOn = !state.isSoundOn
   }
 }

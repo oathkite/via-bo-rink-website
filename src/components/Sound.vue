@@ -1,5 +1,5 @@
 <template>
-  <div class="sound" v-on:click="toggle">
+  <div class="sound" v-on:click="toggleSound">
     <sound-on v-if="isSoundOn"/>
     <sound-off v-else/>
   </div>
@@ -24,7 +24,12 @@ export default {
   methods: {
     ...mapMutations({
       toggle: 'toggleSound'
-    })
+    }),
+    toggleSound: function(event) {
+      this.toggle()
+      let video = document.querySelector('#kv')
+      video.muted = !video.muted
+    }
   }
 }
 </script>
