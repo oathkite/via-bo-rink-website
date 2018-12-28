@@ -44,7 +44,7 @@ export default {
   }
 
   svg {
-    height: 12px;
+    height: 16px;
   }
 }
 </style>
