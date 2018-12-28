@@ -142,7 +142,7 @@ video {
 
   @include media(md, max) {
     max-width: 100vw;
-    max-height: calc(100vh - 80px);
+    max-height: calc(100vh - 100px);
     position: absolute;
     top: 50vh;
     transform: translateY(calc(-50% + 16px));
