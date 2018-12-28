@@ -126,6 +126,7 @@ a {
 .site-header {
   margin-bottom: 48px;
   display: flex;
+  align-items: center;
 
   @include media(md, max) {
     margin-bottom: 12px;
