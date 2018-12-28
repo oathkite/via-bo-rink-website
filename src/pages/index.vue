@@ -74,6 +74,7 @@ a {
 .site-nav {
   margin-left: auto;
   position: relative;
+  transform: translateY(1px);
 
   &-menu {
     display: flex;
