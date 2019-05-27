@@ -28,7 +28,7 @@
       </nav>
     </div>
 
-    <video id="kv" src="~static/video/kv.mp4" playsinline muted autoplay loop></video>
+    <video id="kv" src="~static/video/kv_2.mp4" playsinline muted autoplay loop></video>
   </section>
 </template>
 
